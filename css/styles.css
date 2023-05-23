@@ -83,9 +83,6 @@ body {
   max-width: 428px;
   padding: 0 16px;
   margin: 0 auto;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 @media screen and (min-width: 768px) {
