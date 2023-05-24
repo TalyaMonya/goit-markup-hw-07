@@ -335,6 +335,8 @@ body {
 
 @media screen and (min-width: 1158px) {
   .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -606,7 +608,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .customer-card {
-    width: 168px;
+    max-width: 168px;
     flex-basis: calc((100% - 48px) / 3);
   }
 }
@@ -651,6 +653,15 @@ body {
   flex-wrap: wrap;
   align-items: baseline;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1158px) {
+  .footer-container {
+    width: 552px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
 .footer {
   padding-top: 96px;
   padding-bottom: 96px;
@@ -685,7 +696,6 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-left-side {
-    margin-left: 92px;
     margin-right: 24px;
   }
 }
@@ -770,12 +780,6 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1157px) {
-  .footer-right-side {
-    margin-left: 92px;
   }
 }
 
@@ -890,20 +894,15 @@ body {
   pointer-events: none;
 }
 
-@media screen and (max-width: 767px) {
-  .modal {
-    width: 392px;
-  }
-}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px 24px;
+  min-width: 392px;
+  height: 584px;
+  padding: 72px 16px 24px 16px;
 
   background: var(--modal-window-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -911,6 +910,20 @@ body {
   border-radius: 4px;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 392px) {
+  .modal {
+    min-width: 318px;
+    padding: 56px 16px 24px 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
 }
 
 .modal-close-btn {
@@ -956,6 +969,12 @@ body {
   margin-bottom: 16px;
 
   color: var(--primary-color);
+}
+
+@media screen and (max-width: 400px) {
+  .modal-title {
+    margin-bottom: 6px;
+  }
 }
 
 .modal-form-input {
@@ -1040,12 +1059,19 @@ body {
 
 .modal-form-check-desc {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--icon-color);
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 400px) {
+  .modal-form-check-desc {
+    margin-bottom: 6px;
+  }
 }
 
 .modal-form-policy {
@@ -1381,7 +1407,7 @@ body {
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--secondary-color);
+  color: var(--primary-brand-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
