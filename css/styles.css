@@ -1226,7 +1226,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1158px) {
   .project-card {
     flex-basis: calc((100% - 48px) / 3);
   }
@@ -1395,6 +1395,12 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 56px;
+}
+
+@media screen and (max-width: 402px) {
+  .mobile-socials {
+    gap: 28px;
+  }
 }
 
 .contacts-item:not(:last-child) {
